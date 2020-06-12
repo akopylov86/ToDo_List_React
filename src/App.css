@@ -1,11 +1,106 @@
 .App {
   text-align: center;
+  margin: 0 auto;
+  width: 65%;
+  height: 100vh;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+
+.title {
+  font-size: 30px;
+  padding-top: 1em;
+}
+
+/*Add To_DO*/
+.adding_line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+
+/*List*/
+.list {
+  width: 60%;
+  margin: 0 auto;
+  padding-top: 1em;
+}
+
+li {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 35px;
+  align-items: center;
+  border: 1px darkgrey solid;
+  padding: 0 20px;
+  margin-bottom: 4px;
+}
+
+.done{
+  text-decoration: line-through;
+}
+
+.todo_text{
+  border: none;
+}
+
+.delete_button {
+  background: red;
+  border-radius: 50%;
+  border: none;
+}
+
+button,
+button:active,
+button:focus {
+  outline: none;
+}
+
+/*Loader*/
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fcf transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*ADaptive*/
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
